@@ -14,8 +14,15 @@
 		</div>
 	</div>
 	<div class="posts-wrapper row center-xs top-xs col-xs-12 black">
-		<div class="post col-xs-8 red">
-			<div class="box"></div>
-		</div>
+		{#each data.posts as post}
+			<div class="post col-xs-8 red">
+				<div class="box">
+					<h1>{post.Title}</h1>
+					<span>Published on {new Date(post.PublishedAt).toISOString().split('T')[0]}</span>
+					<div class="post-content">{@html post.Description.String}</div>
+					<a href={post.Url}>Read More</a>
+				</div>
+			</div>
+		{/each}
 	</div>
 </div>

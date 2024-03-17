@@ -1,9 +1,13 @@
 <script>
-	export let data;
-	const posts = data.posts;
+	// export let data;
+	// const posts = data.posts;
+	import Posts from './Posts.svelte';
+	import data from './data';
 </script>
 
-<div class="main-wrapper row top-xs red">
+<Posts {...$data} key="ID" on:loadMore={data.fetchMore}></Posts>
+
+<!-- <div class="main-wrapper row top-xs red">
 	<div class="header-wrapper center-xs col-xs-12 blue">
 		<div class="header-content row middle-xs cyan">
 			<div class="col-xs-2 title-wrapper">
@@ -25,4 +29,4 @@
 			</div>
 		{/each}
 	</div>
-</div>
+</div> -->

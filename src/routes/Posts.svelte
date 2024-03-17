@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import viewport from './useViewportAction';
-	export let data;
-	export let key;
-	export let noMoreData;
+	import type { Post } from './data';
+
+	export let data: Post[];
+	export let key: keyof Post;
+	export let noMoreData: boolean;
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -20,6 +22,10 @@
 		</div>
 	{/each}
 	{#if !noMoreData}
-		<div class="uwu" use:viewport on:enterViewport={() => dispatch('loadMore')}></div>
+		<div
+			style="height:5px; width:5px"
+			use:viewport
+			on:enterViewport={() => dispatch('loadMore')}
+		></div>
 	{/if}
 </div>

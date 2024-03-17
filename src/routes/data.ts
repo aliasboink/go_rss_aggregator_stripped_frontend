@@ -1,9 +1,23 @@
 import { writable } from 'svelte/store';
 
+export interface Post {
+  ID: string;
+  CreatedAt: string;
+  UpdatedAt: string;
+  Title: string;
+  Url: string;
+  Description: {
+    String: string;
+    Valid: boolean;
+  };
+  PublishedAt: string;
+  FeedID: string;
+}
+
 let loading = false;
 let noMoreData = false;
 let offset = 0;
-let data = [];
+let data: Post[] = [];
 let limit = 15;
 
 const posts = writable({

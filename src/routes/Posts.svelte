@@ -10,14 +10,16 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<div class="posts-wrapper row center-xs top-xs col-xs-12 black">
+<div class="posts-wrapper row center-xs top-xs col-xs-12 revolver">
 	{#each data as post (post[key])}
-		<div class="post col-xs-8 red">
+		<div class="post col-xs-6 revolver">
 			<div class="box">
-				<h1>{post.Title}</h1>
-				<span>Published on {new Date(post.PublishedAt).toISOString().split('T')[0]}</span>
+				<h1 class="post-title"><a href={post.Url}>{post.Title}</a></h1>
+				<span class="post-publish"
+					>Published on {new Date(post.PublishedAt).toISOString().split('T')[0]}</span
+				>
 				<div class="post-content">{@html post.Description.String}</div>
-				<a href={post.Url}>Read More</a>
+				<div class="post-footer"><a class="blue-text" href={post.Url}>Read More</a></div>
 			</div>
 		</div>
 	{/each}

@@ -1,29 +1,23 @@
-.blue {
-  background: #007FFF;
-}
-
-.red {
-  background: #cf0a0a;
-}
-
-.green {
-  background: #7dd10f;
-}
-
-.black {
-  background: #353536;
+.revolver {
+  background: #292A2D;
 }
 
 .cyan {
   background: #0fc1d9;
 }
 
+.blue-charcoal {
+  background: #252627;
+}
+
 html {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei UI, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #292A2D;
 }
 
 a {
   color: #a9a9b3;
+  text-decoration: none;
 }
 
 a:hover {
@@ -39,6 +33,10 @@ a:hover {
   padding: 0 2rem 0 10vh;
   height: 3.5rem;
   width: 100%;
+}
+
+.header-wrapper:hover {
+  box-shadow: 0 0 1rem rgba(33, 255, 33, 1);
 }
 
 .header-content {
@@ -66,6 +64,31 @@ a.title {
 }
 
 .post {
-  height: 8rem;
   margin: 0.75rem;
+  text-align: left;
+  color: #525355;
+}
+
+.post-title {
+  font-size: 1.25rem;
+  line-height: 140%;
+  margin: 0.4rem 0;
+  font-weight: bold;
+}
+
+.post-publish {
+  margin: 0.5rem 0 0 0;
+}
+
+.post-content {
+  margin: 0.5rem 0 0 0;
+}
+
+.post-footer {
+  margin: 0.5rem 0 1rem 0;
+  padding: 0 0 0 0;
+}
+
+.blue-text {
+  color: #2d96bd;
 }

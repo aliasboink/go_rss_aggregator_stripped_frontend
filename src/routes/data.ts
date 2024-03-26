@@ -28,10 +28,9 @@ const posts = writable({
 export default {
   subscribe: posts.subscribe,
   async fetchMore() {
-    console.log("Testi")
     if (loading || noMoreData) return;
     loading = true;
-    const response = await fetch(`http://localhost:8080/v1/posts/${offset}`);
+    const response = await fetch(`https://api.adrian-docs.com//v1/posts/${offset}`);
     const newPosts = await response.json();
     offset = offset + limit
     loading = false;

@@ -30,7 +30,7 @@ export default {
   async fetchMore() {
     if (loading || noMoreData) return;
     loading = true;
-    const response = await fetch(`https://api.adrian-docs.com//v1/posts/${offset}`);
+    const response = await fetch(`https://api.adrian-docs.com/v1/posts/${offset}`);
     const newPosts = await response.json();
     offset = offset + limit
     loading = false;
